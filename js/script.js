@@ -1,33 +1,56 @@
 'use strict';
 
-const construct = document.querySelectorAll('.props__item');
-const eS6 = document.querySelectorAll('.props__list');
-const object = document.querySelectorAll('.props__item_five');
-const region = document.querySelectorAll('.props__item_three');
-const optimization = document.querySelectorAll('.props__item');
 
-construct[3].prepend(eS6[5])
+const item = document.querySelectorAll('.item');
+const list = document.querySelector('.items');
+const imgItem = document.querySelectorAll('.item__image');
+const textItem = document.querySelectorAll('.props__list');
+const removeAds = document.querySelector('.ads')
+const textItemFour = document.querySelectorAll('.props__item_four');
+const textItemTwo = document.querySelectorAll('.props__item_two');
+const contextItem = document.querySelectorAll('.content');
+const textTitle = document.querySelectorAll('.item__title');
+list.prepend(item[1]);
+removeAds.remove();
+console.log(textItem);
+console.log(textTitle);
+console.log(contextItem);
+console.log(imgItem);
 
-object[0].before(region[0]);
-region[1].before(object[0]);
-object[1].before(region[1]);
-region[2].before(object[1]);
-object[2].before(region[2]);
-region[3].before(object[2]);
-object[3].before(region[3]);
-region[4].before(object[3]);
-object[4].before(region[4]);
-region[5].before(object[4]);
-object[5].before(region[5]);
-region[6].before(object[5]);
-object[6].before(region[6]);
+contextItem[4].prepend(imgItem[2]);
+contextItem[4].append(textItem[2]);
+imgItem[4].remove();
+contextItem[4].style.background = '#46a75e';
+contextItem[2].style.background = '#466ba7';
+// contextItem[3].style.background = '#466ba7';
+textItemFour[2].append(textItemFour[5]);
+textItemTwo[7].append(textItemTwo[8]);
+textItemTwo[8].append(textItemTwo[9]);
+item[1].insertAdjacentElement('afterend', item[4]);
+item[0].insertAdjacentElement('afterend', item[2]);
+item[0].insertAdjacentElement('beforebegin', item[3]);
+
+contextItem[5].append(textTitle[1]);
+contextItem[2].append(textTitle[4]);
+textTitle[1].insertAdjacentElement('afterend', textItem[5]);
 
 
+const clone2 = textItem[3].cloneNode(true);
+const imgClone = imgItem[4].cloneNode(true);
+const titleClone = textTitle[4].cloneNode(true);
+const clone = textItem[4].cloneNode(true);
+textItem[3].remove();
+textItem[4].remove();
+textTitle[4].remove();
+contextItem[3].append(clone);
 
-eS6[2].append(optimization[8]);
-eS6[2].append(optimization[9]);
+contextItem[2].append(imgClone);
+contextItem[2].append(titleClone);
+contextItem[2].append(clone2);
 
 
-console.log(region)
-console.log(object);
+// "afterend" – вставить html непосредственно после elem.
+// "beforebegin" – вставить html непосредственно перед elem,
 
+
+//
